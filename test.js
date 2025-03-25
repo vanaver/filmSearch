@@ -23,7 +23,7 @@ async function fetchApi(query, searchMultiple = false, page = 1) {
     const queryParam = searchMultiple ? 's' : 'i';
 
     try {
-        const response = await fetch(`http://www.omdbapi.com/?apikey=${apikey}&${queryParam}=${query}&page=${page}`);
+        const response = await fetch(`https://www.omdbapi.com/?apikey=${apikey}&${queryParam}=${query}&page=${page}`);
         const data = await response.json();
 
         if (data.Response === 'True') {
