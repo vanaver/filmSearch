@@ -111,6 +111,7 @@ async function obnovka () {
         currentPage.innerHTML = `страница ${count}`
         newCard.addEventListener('click', function(){
             console.log(fullMovieData);
+            localStorage.setItem('currentFilm', JSON.stringify(fullMovieData))
             window.location.href='./filmInfo/filmInfo.html';
         })
     }
