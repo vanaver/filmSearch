@@ -109,6 +109,10 @@ async function obnovka () {
         // Добавляем карточку в контейнер
         cards.appendChild(newCard);
         currentPage.innerHTML = `страница ${count}`
+        newCard.addEventListener('click', function(){
+            console.log(fullMovieData);
+            window.location.href='./filmInfo/filmInfo.html';
+        })
     }
 };
 btn.addEventListener('click', obnovka)
