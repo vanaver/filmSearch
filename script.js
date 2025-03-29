@@ -139,4 +139,11 @@ prev.addEventListener('click', function() {
     }
 })
 
+const inp = document.querySelector('input')
+inp.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Предотвращаем действие по умолчанию (если input в форме)
+      btn.click(); // Программно нажимаем кнопку
+    }
+  });
 
